@@ -18,6 +18,7 @@
 -%>
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { QRCodeModule } from 'angular2-qrcode';
 
 import { <%= angularXAppName %>SharedModule } from 'app/shared/shared.module';
 import { <%= entityAngularName %>Component } from './<%= entityFileName %>.component';
@@ -31,6 +32,7 @@ import { <%= entityInstance %>Route } from './<%= entityFileName %>.route';
 @NgModule({
     imports: [
         <%= angularXAppName %>SharedModule,
+        QRCodeModule,
         RouterModule.forChild(<%= entityInstance %>Route)
     ],
     declarations: [
